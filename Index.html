@@ -37,8 +37,9 @@
                     oninput="comparePassword()">
                 <span class="span-required">Senhas devem ser compatíveis</span>
             </div>
-            <textarea class="inputs" name="descricao" id="descricao" cols="25" rows="10"
-                placeholder="Fale um pouco sobre você..."></textarea>
+            <textarea class="inputs required" name="descricao" id="descricao" cols="25" rows="10"
+                placeholder="Fale um pouco sobre você..." oninput="descValidate()"></textarea>
+                <span class="span-required">O texto deve conter no minimo 100 caracteres</span>
             <p>Sexo:</p>
             <div class="box-select">
                 <div>

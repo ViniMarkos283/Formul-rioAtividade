@@ -10,6 +10,7 @@ form.addEventListener('submit', (event) => {
     emailValidate();
     mainPasswordValidate();
     comparePassword();
+    descValidate();
 });
 
 function setError(index){
@@ -30,6 +31,17 @@ function nameValidate(){ // função que valida o nome
     else
     {
         removeError(0);
+    }
+}
+
+function descValidate(){ // função que valida o nome
+    if(campos[5].value.length < 100)
+    {
+        setError(5);
+    }
+    else
+    {
+        removeError(5);
     }
 }
 
