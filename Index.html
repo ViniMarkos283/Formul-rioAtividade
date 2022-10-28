@@ -14,22 +14,24 @@
         <h1>Cadastro Escolar</h1>
         <form id="form">
             <div>
-                <input type="text" placeholder="Digite seu nome" class="inputs required" oninput="nameValidate()">
+                <input type="text" placeholder="Digite seu nome" class="inputs required" id="iname"
+                    oninput="nameValidate()">
                 <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
             </div>
 
             <div>
-                <input type="text" placeholder="Digite seu RA" class="inputs required" oninput="RAValidate()">
+                <input type="text" placeholder="Digite seu RA" class="inputs required" id="ira" oninput="RAValidate()">
                 <span class="span-required">O RA deve conter 13 caracteres</span>
             </div>
 
             <div>
-                <input type="email" placeholder="Digite seu melhor email" class="inputs required"
+                <input type="email" placeholder="Digite seu melhor email" id="iemail" class="inputs required"
                     oninput="emailValidate()">
                 <span class="span-required">Digite um email válido</span>
             </div>
             <div>
-                <input type="password" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()">
+                <input type="password" placeholder="Senha" class="inputs required" id="isenha"
+                    oninput="mainPasswordValidate()">
                 <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
             </div>
             <div>
@@ -37,9 +39,9 @@
                     oninput="comparePassword()">
                 <span class="span-required">As senhas devem ser compatíveis</span>
             </div>
-            <textarea class="inputs required" name="descricao" id="descricao" cols="25" rows="10"
+            <textarea class="inputs required" name="descricao" id="descricao idesc" cols="25" rows="10"
                 placeholder="Fale um pouco sobre você..." oninput="descValidate()"></textarea>
-                <span class="span-required">O texto deve conter no minimo 100 caracteres</span>
+            <span class="span-required">O texto deve conter no minimo 100 caracteres</span>
             <p>Sexo:</p>
             <div class="box-select">
                 <div>
@@ -55,9 +57,24 @@
                     <label for="o">Outro</label>
                 </div>
             </div>
-    
-            <button type="submit">Enviar</button>
+
+            <button type="submit" onclick="submit()">Enviar</button>
         </form>
+        <br>
+        <form id="form">
+            <div>
+                <h5>Dados:</h5>
+                <p>nome:
+                <p id="name"></p>
+                </p>
+                <p>RA:
+                <p id="ra"></p>
+                </p>
+                <p>E-mail:
+                <p id="email"></p>
+                </p>
+            </div>
+
     </div>
 </body>
 <script type="text/javascript" src="form.js"></script>
